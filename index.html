@@ -33,18 +33,22 @@
   :root{
     --bg:#0b0b0d;
     --card:#111114;
+
     --text:#ffffff;
     --muted:#cfcfd6;
 
     --red:#de2020;
     --red2:#ff3b3b;
 
+    --green:#25d366;
+    --green2:#128c7e;
+
     --stroke:rgba(222,32,32,.35);
 
     --shadow:
       0 22px 60px rgba(0,0,0,.65);
 
-    --radius:20px;
+    --radius:22px;
   }
 
   *{
@@ -107,8 +111,8 @@
     background:
       linear-gradient(
         180deg,
-        rgba(17,17,20,.92),
-        rgba(10,10,12,.92)
+        rgba(17,17,20,.94),
+        rgba(10,10,12,.94)
       );
 
     border:
@@ -140,7 +144,7 @@
 
     text-align:center;
 
-    padding:32px 24px 18px;
+    padding:34px 24px 18px;
   }
 
   .logo{
@@ -170,13 +174,14 @@
     height:100%;
 
     display:block;
+
     object-fit:contain;
   }
 
   h1{
-    margin-top:16px;
+    margin-top:18px;
 
-    font-size:28px;
+    font-size:30px;
     font-weight:800;
 
     letter-spacing:.4px;
@@ -195,8 +200,20 @@
   }
 
   .content{
-    padding:0 20px 24px;
+    padding:0 20px 26px;
   }
+
+  /* ===== CONTACT BOX ===== */
+
+  .contact-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+
+    margin:16px 0;
+  }
+
+  /* ===== BUTTONS ===== */
 
   .btn{
     width:100%;
@@ -204,23 +221,23 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:12px;
+    gap:10px;
 
     text-decoration:none;
+
     color:var(--text);
 
-    padding:16px;
-    margin:14px 0;
+    padding:16px 18px;
 
     border-radius:16px;
 
     border:
-      1px solid rgba(222,32,32,.35);
+      1px solid rgba(255,255,255,.08);
 
     background:
       rgba(255,255,255,.04);
 
-    font-size:16px;
+    font-size:15px;
     font-weight:700;
 
     letter-spacing:.2px;
@@ -230,8 +247,8 @@
 
     transition:
       transform .2s ease,
-      box-shadow .2s ease,
-      filter .2s ease;
+      filter .2s ease,
+      box-shadow .2s ease;
   }
 
   .btn i{
@@ -247,18 +264,38 @@
       0 14px 38px rgba(0,0,0,.45);
   }
 
-  /* WhatsApp Button */
+  /* ===== CALL BUTTON ===== */
 
-  .btn.primary{
+  .call-btn{
     background:
       linear-gradient(
         135deg,
-        #25d366,
-        #128c7e
+        var(--red2),
+        var(--red)
       );
 
     border:
       1px solid rgba(0,0,0,.25);
+  }
+
+  /* ===== WHATSAPP BUTTON ===== */
+
+  .whatsapp-btn{
+    background:
+      linear-gradient(
+        135deg,
+        var(--green),
+        var(--green2)
+      );
+
+    border:
+      1px solid rgba(0,0,0,.25);
+  }
+
+  /* ===== NORMAL BUTTONS ===== */
+
+  .normal-btn{
+    margin:14px 0;
   }
 
   footer{
@@ -266,12 +303,15 @@
 
     padding:18px;
 
-    color:rgba(207,207,214,.9);
+    color:
+      rgba(207,207,214,.9);
 
     font-size:13px;
   }
 
-  @media (max-width:460px){
+  /* ===== MOBILE ===== */
+
+  @media (max-width:520px){
 
     header{
       padding:26px 18px 14px;
@@ -283,16 +323,20 @@
     }
 
     h1{
-      font-size:24px;
-    }
-
-    .btn{
-      font-size:15px;
-      padding:15px;
+      font-size:25px;
     }
 
     .content{
       padding:0 14px 20px;
+    }
+
+    .contact-box{
+      grid-template-columns:1fr;
+    }
+
+    .btn{
+      padding:15px;
+      font-size:15px;
     }
   }
 
@@ -332,22 +376,39 @@
 
     <div class="content">
 
-      <!-- WhatsApp -->
+      <!-- CONTACT BUTTONS -->
+
+      <div class="contact-box">
+
+        <!-- CALL -->
+
+        <a
+          class="btn call-btn"
+          href="tel:+13477914650"
+        >
+          <i class="fa-solid fa-phone"></i>
+
+          Call
+        </a>
+
+        <!-- WHATSAPP -->
+
+        <a
+          class="btn whatsapp-btn"
+          href="https://wa.me/13477914650"
+          target="_blank"
+        >
+          <i class="fa-brands fa-whatsapp"></i>
+
+          WhatsApp
+        </a>
+
+      </div>
+
+      <!-- EMAIL -->
 
       <a
-        class="btn primary"
-        href="https://wa.me/13477914650"
-        target="_blank"
-      >
-        <i class="fa-brands fa-whatsapp"></i>
-
-        +1 (347) 791-4650
-      </a>
-
-      <!-- Email -->
-
-      <a
-        class="btn"
+        class="btn normal-btn"
         href="mailto:Princerepair03@gmail.com"
       >
         <i class="fa-solid fa-envelope"></i>
@@ -355,10 +416,10 @@
         Princerepair03@gmail.com
       </a>
 
-      <!-- Website -->
+      <!-- WEBSITE -->
 
       <a
-        class="btn"
+        class="btn normal-btn"
         href="https://princerepair.com"
         target="_blank"
         rel="noopener"
@@ -368,10 +429,10 @@
         Princerepair.com
       </a>
 
-      <!-- Instagram -->
+      <!-- INSTAGRAM -->
 
       <a
-        class="btn"
+        class="btn normal-btn"
         href="https://instagram.com/princerepair"
         target="_blank"
         rel="noopener"
