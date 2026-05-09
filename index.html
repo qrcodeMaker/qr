@@ -203,16 +203,6 @@
     padding:0 20px 26px;
   }
 
-  /* ===== CONTACT BOX ===== */
-
-  .contact-box{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-
-    margin:16px 0;
-  }
-
   /* ===== BUTTONS ===== */
 
   .btn{
@@ -221,13 +211,14 @@
     display:flex;
     align-items:center;
     justify-content:center;
-    gap:10px;
+    gap:12px;
 
     text-decoration:none;
 
     color:var(--text);
 
     padding:16px 18px;
+    margin:14px 0;
 
     border-radius:16px;
 
@@ -292,12 +283,6 @@
       1px solid rgba(0,0,0,.25);
   }
 
-  /* ===== NORMAL BUTTONS ===== */
-
-  .normal-btn{
-    margin:14px 0;
-  }
-
   footer{
     text-align:center;
 
@@ -328,10 +313,6 @@
 
     .content{
       padding:0 14px 20px;
-    }
-
-    .contact-box{
-      grid-template-columns:1fr;
     }
 
     .btn{
@@ -376,39 +357,21 @@
 
     <div class="content">
 
-      <!-- CONTACT BUTTONS -->
+      <!-- PHONE -->
 
-      <div class="contact-box">
+      <a
+        class="btn call-btn"
+        href="tel:+13477914650"
+      >
+        <i class="fa-solid fa-phone"></i>
 
-        <!-- CALL -->
-
-        <a
-          class="btn call-btn"
-          href="tel:+13477914650"
-        >
-          <i class="fa-solid fa-phone"></i>
-
-          Call
-        </a>
-
-        <!-- WHATSAPP -->
-
-        <a
-          class="btn whatsapp-btn"
-          href="https://wa.me/13477914650"
-          target="_blank"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-
-          WhatsApp
-        </a>
-
-      </div>
+        +1 (347) 791-4650
+      </a>
 
       <!-- EMAIL -->
 
       <a
-        class="btn normal-btn"
+        class="btn"
         href="mailto:Princerepair03@gmail.com"
       >
         <i class="fa-solid fa-envelope"></i>
@@ -416,23 +379,10 @@
         Princerepair03@gmail.com
       </a>
 
-      <!-- WEBSITE -->
-
-      <a
-        class="btn normal-btn"
-        href="https://princerepair.com"
-        target="_blank"
-        rel="noopener"
-      >
-        <i class="fa-solid fa-globe"></i>
-
-        Princerepair.com
-      </a>
-
       <!-- INSTAGRAM -->
 
       <a
-        class="btn normal-btn"
+        class="btn"
         href="https://instagram.com/princerepair"
         target="_blank"
         rel="noopener"
@@ -440,6 +390,18 @@
         <i class="fa-brands fa-instagram"></i>
 
         @princerepair
+      </a>
+
+      <!-- WHATSAPP -->
+
+      <a
+        class="btn whatsapp-btn"
+        href="https://wa.me/13477914650"
+        target="_blank"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+
+        WhatsApp Chat
       </a>
 
     </div>
